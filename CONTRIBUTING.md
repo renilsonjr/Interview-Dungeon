@@ -45,7 +45,8 @@ zones, floors, weights and bosses. Every requirement gets a trust label:
 
 ## 3. Play the prototype and give feedback
 
-Open [`prototype/index.html`](prototype/index.html) in a browser, play through Floor III,
+Play it at https://renilsonjr.github.io/Interview-Dungeon/prototype/ (or open
+[`prototype/index.html`](prototype/index.html) locally), play through Floor III,
 and open a **Feedback** issue. Useful feedback is specific: which screen, what you
 expected, what happened, and whether you'd actually use it to study.
 

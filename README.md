@@ -34,7 +34,9 @@ each zone and each floor.
 
 ## Try the prototype
 
-Open [`prototype/index.html`](prototype/index.html) in a browser. Everything in it is
+**Play it online: https://renilsonjr.github.io/Interview-Dungeon/prototype/**
+
+Or open [`prototype/index.html`](prototype/index.html) in a browser. Everything in it is
 sample data and nothing is saved. Start with *Enter → Play → Descend → The descent*,
 then click Floor III.
 
@@ -90,8 +92,8 @@ entrevista cobra, e cada andar termina num chefe que copia o formato real da ent
 
 Se você chegou aqui por um dos vídeos: a forma mais útil de ajudar agora é **contar como
 foi a sua entrevista** (etapas, formato e assuntos, sem revelar perguntas confidenciais),
-usando o modelo de issue **Interview report**. Também dá para jogar o protótipo e dar a
-sua opinião, propor uma masmorra nova, ou escrever páginas de estudo em português.
+usando o modelo de issue **Interview report**. Também dá para jogar o protótipo
+(https://renilsonjr.github.io/Interview-Dungeon/prototype/) e dar a sua opinião, propor uma masmorra nova, ou escrever páginas de estudo em português.
 
 ## License
 
