@@ -55,6 +55,8 @@ The full design is in [`docs/design.md`](docs/design.md), and the first path is 
 
 ## How you can help
 
+**Join the community on Discord: https://discord.gg/cfDFY9NZMj**
+
 You don't need to write code to contribute. The most valuable help right now:
 
 - **Share your interview experience.** If you've interviewed for a role, tell us how
@@ -89,6 +91,8 @@ Details in [`docs/ip-rules.md`](docs/ip-rules.md).
 O Interview Dungeon é um jogo, inspirado no Diablo 1, para se preparar para entrevistas
 de tecnologia. Cada masmorra é uma vaga real, cada andar é uma habilidade que a
 entrevista cobra, e cada andar termina num chefe que copia o formato real da entrevista.
+
+Entre no nosso Discord: https://discord.gg/cfDFY9NZMj
 
 Se você chegou aqui por um dos vídeos: a forma mais útil de ajudar agora é **contar como
 foi a sua entrevista** (etapas, formato e assuntos, sem revelar perguntas confidenciais),
