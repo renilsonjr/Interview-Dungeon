@@ -95,5 +95,5 @@ sua opinião, propor uma masmorra nova, ou escrever páginas de estudo em portug
 
 ## License
 
-Not chosen yet. Until a license is added, please don't reuse the code or content
-outside this repository.
+[MIT](LICENSE). By contributing, you agree that your contributions are licensed under
+the same terms.

@@ -24,7 +24,7 @@ server (phase 10).
 
 | Phase | What | Done when |
 |---|---|---|
-| 0. Groundwork | Name check, license, IP rules, API keys with a spending limit | License added and IP rules written |
+| 0. Groundwork | Name check, license (MIT, done), IP rules (done), API keys with a spending limit | API keys set up with a spending limit |
 | 1. Repo foundation | Folders (`apps/web`, `apps/api`, `content/`, `tools/`, `docs/`), Docker, linting, tests, CI | The first pull request shows green checks |
 | 2. Data model | ERD, migrations, seed with the Google path, readiness calculation with tests | Tests pass with the values in the design |
 | 3. Content pipeline (Floor III) | Problem format, generator, validator, approval tool, learning pages and quizzes | Floor III pool approved: 5+ step problems, 20+ boss problems |
