@@ -1,0 +1,28 @@
+name: Feedback
+description: You played the prototype and have something to say
+title: "[Feedback] <short summary>"
+labels: ["feedback"]
+body:
+  - type: input
+    id: screen
+    attributes:
+      label: Which screen?
+      placeholder: The descent, Floor III boss, the dev scroll...
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: use
+    attributes:
+      label: Would you use this to study?
+      options:
+        - "Yes"
+        - Maybe, if something changed
+        - "No"
+  - type: textarea
+    id: why
+    attributes:
+      label: Why?

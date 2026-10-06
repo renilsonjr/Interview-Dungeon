@@ -1,0 +1,31 @@
+name: New path
+description: Propose a new dungeon for a role that isn't covered yet
+title: "[New path] <Company> - <Role>"
+labels: ["new-path"]
+body:
+  - type: input
+    id: role
+    attributes:
+      label: Company, role and level
+      placeholder: Ramp, Software Engineering Intern
+    validations:
+      required: true
+  - type: textarea
+    id: process
+    attributes:
+      label: What you know about the interview process
+      description: Rounds, formats and topics. Mark each one as Official, Reported or Estimated.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Careers pages, your own experience, candidate reports (links).
+    validations:
+      required: true
+  - type: textarea
+    id: new-skills
+    attributes:
+      label: Skills it tests that existing paths don't
+      placeholder: Multi-level practical builds, SQL schema review...

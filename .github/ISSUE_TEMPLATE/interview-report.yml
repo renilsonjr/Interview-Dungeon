@@ -1,0 +1,63 @@
+name: Interview report
+description: Share how a real interview process went (formats and topics, never confidential questions)
+title: "[Interview report] <Company> - <Role>"
+labels: ["interview-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing. **Please don't post exact questions or anything you agreed to keep confidential.**
+        Formats, lengths and topics are what helps.
+  - type: input
+    id: company
+    attributes:
+      label: Company
+      placeholder: Google
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Role and level
+      placeholder: Software Engineering Intern
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: When (month and year)
+      placeholder: September 2026
+    validations:
+      required: true
+  - type: textarea
+    id: rounds
+    attributes:
+      label: Rounds, in order
+      description: For each round, the format, the length and the topics.
+      placeholder: |
+        1. Online assessment, 90 min, 2 problems (arrays, graphs). Could run sample tests.
+        2. Technical interview, 45 min, plain shared doc, no running code. Topic: trees.
+        3. Team match, 30 min, behavioral questions about my projects.
+    validations:
+      required: true
+  - type: textarea
+    id: graded
+    attributes:
+      label: What did they seem to care about?
+      placeholder: Asking clarifying questions, explaining complexity, testing with examples...
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome (optional)
+      options:
+        - Prefer not to say
+        - Offer
+        - Rejected
+        - Still in process
+  - type: checkboxes
+    id: nda
+    attributes:
+      label: Confidentiality
+      options:
+        - label: This report doesn't include any question or content I agreed to keep confidential.
+          required: true
