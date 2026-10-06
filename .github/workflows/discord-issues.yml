@@ -1,0 +1,41 @@
+# Posts every new issue to the matching Discord channel, based on its label.
+# The webhook URLs live in repository secrets, never in this file.
+name: Notify Discord about new issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions: {}
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send to Discord
+        env:
+          # Issue fields are user input: pass them as env vars, never inline them in the script.
+          TITLE: ${{ github.event.issue.title }}
+          URL: ${{ github.event.issue.html_url }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+          HOOK_INTERVIEW_REPORTS: ${{ secrets.DISCORD_WEBHOOK_INTERVIEW_REPORTS }}
+          HOOK_NEW_PATHS: ${{ secrets.DISCORD_WEBHOOK_NEW_PATHS }}
+          HOOK_FEEDBACK: ${{ secrets.DISCORD_WEBHOOK_FEEDBACK }}
+          HOOK_DEV: ${{ secrets.DISCORD_WEBHOOK_DEV }}
+        run: |
+          case ",$LABELS," in
+            *,interview-report,*) HOOK="$HOOK_INTERVIEW_REPORTS"; KIND="New interview report" ;;
+            *,new-path,*)         HOOK="$HOOK_NEW_PATHS";         KIND="New dungeon proposal" ;;
+            *,feedback,*)         HOOK="$HOOK_FEEDBACK";          KIND="New prototype feedback" ;;
+            *)                    HOOK="$HOOK_DEV";               KIND="New issue" ;;
+          esac
+          if [ -z "$HOOK" ]; then
+            echo "No webhook secret set for this kind of issue. Skipping."
+            exit 0
+          fi
+          # allowed_mentions stops a title like "@everyone" from pinging the server.
+          jq -n --arg kind "$KIND" --arg title "$TITLE" --arg url "$URL" --arg author "$AUTHOR" \
+            '{username: "Interview Dungeon", allowed_mentions: {parse: []},
+              content: "**\($kind)** by \($author)\n\($title)\n\($url)"}' \
+          | curl -sS --fail -H "Content-Type: application/json" -d @- "$HOOK" > /dev/null
