@@ -32,13 +32,20 @@ Interview Dungeon tries to fix that with three ideas:
 It's also a **dev diary**: every hero has a scroll for general notes, plus notes for
 each zone and each floor.
 
-## Try the prototype
+## Play the demo
 
 **Play it online: https://renilsonjr.github.io/Interview-Dungeon/prototype/**
 
-Or open [`prototype/index.html`](prototype/index.html) in a browser. Everything in it is
-sample data and nothing is saved. Start with *Enter → Play → Descend → The descent*,
-then click Floor III.
+The demo is Floor III (Arrays) of the Google SWE Intern path, shortened:
+
+- Create a hero (the class only changes how it looks).
+- **Learn** three array patterns, in English or Brazilian Portuguese.
+- **Recognize:** a quiz where wrong answers come back at the end.
+- **Four coding problems.** Real Python runs in your browser, with sample tests and hidden tests.
+- **The boss:** 45 minutes, no running code, approach before coding, then state the complexity.
+- **The dev scroll:** your notes, general and per floor.
+
+Your progress is saved in your own browser only. Nothing is sent anywhere.
 
 ## How a dungeon works
 
