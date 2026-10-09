@@ -12,14 +12,17 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161513;--card:#201f1d;--soft:#2a2926;--tx:#ecebe7;--tx2:#a9a7a0;--bd:#3a3935;--acc:#85b7eb;--ok:#97c459;--bad:#f09595;--warn:#fac775;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#161513;--card:#201f1d;--soft:#2a2926;--tx:#ecebe7;--tx2:#a9a7a0;--bd:#3a3935;--acc:#85b7eb;--ok:#97c459;--bad:#f09595;--warn:#fac775;color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding-block:16px;padding-inline:16px}
-.wrap{max-width:900px;margin:0 auto}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding-block:10px;padding-inline:16px;display:flex;flex-direction:column}
+.wrap{width:100%;flex:1;display:flex;flex-direction:column;min-height:0}
+#app{flex:1;display:flex;flex-direction:column;min-height:0}
+#app>.btn{align-self:flex-start}
 .note{font-size:12px;color:var(--tx2);margin:0 0 10px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .note a{color:var(--tx2)}
 button{font:inherit}
 button:focus-visible,a:focus-visible,[tabindex]:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid #d8b25a;outline-offset:2px}
 .gl{font-family:"Segoe UI Symbol","Apple Symbols",system-ui,sans-serif;display:inline-block;min-width:1em;text-align:center}
-.g{background:#0d0b09;border-radius:12px;padding:18px;font-family:'Cinzel',Georgia,serif;color:#c9b38a;min-height:440px}
+.g{background:#0d0b09;border-radius:12px;padding:18px;font-family:'Cinzel',Georgia,serif;color:#c9b38a;flex:1;min-height:440px;display:flex;flex-direction:column}
 .pan{background:#1a1612;border:2px solid #4a3d2c;outline:1px solid #2a2219;outline-offset:-6px;padding:14px 16px;min-width:0}
 .tt{text-align:center;color:#d8b25a;font-size:17px;letter-spacing:2px;margin:0 0 12px}
 .sm{font-size:11px;color:#8a7650}
@@ -53,23 +56,26 @@ button:focus-visible,a:focus-visible,[tabindex]:focus-visible,textarea:focus-vis
 .bar button{background:none;border:none;color:#c9b38a;cursor:pointer;font-family:inherit;font-size:12px;padding:0}
 .mo{width:18px;height:18px;border-radius:50%;border:1.5px solid #4a3d2c;position:relative;overflow:hidden;background:#120f0c}
 .mo div{position:absolute;left:0;right:0;bottom:0}
-.wk{background:var(--card);border:1px solid var(--bd);border-top:none;border-radius:0 0 12px 12px}
+.wk{background:var(--card);border:1px solid var(--bd);border-top:none;border-radius:0 0 12px 12px;flex:1}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
 .split>div{padding:14px 16px;min-width:0}.split>div:first-child{border-right:1px solid var(--bd)}
 .lb{font-size:12px;color:var(--tx2);margin:0}
 .wb{font-family:inherit;font-size:14px;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:7px 12px;cursor:pointer}
 .wb:hover{background:var(--soft)}
 .wb[disabled]{opacity:.5;cursor:default}
+textarea.code{flex:1;min-height:260px}
 textarea.code,textarea.plain{width:100%;font-size:13px;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:8px;resize:vertical}
 .mono,textarea.code{font-family:ui-monospace,Menlo,Consolas,monospace}
 textarea:disabled{background:var(--soft);color:var(--tx2)}
 .ex{background:var(--soft);border-radius:8px;padding:8px 10px;font-size:12px;margin:8px 0;white-space:pre;overflow-x:auto}
-.res{font-size:13px;line-height:1.5;margin-top:8px;max-height:280px;overflow:auto}
+.res{font-size:13px;line-height:1.5;margin-top:8px;max-height:38vh;overflow:auto}
 .res .case{border:1px solid var(--bd);border-radius:8px;padding:6px 8px;margin:6px 0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;white-space:pre-wrap;word-break:break-word}
 .okc{color:var(--ok)}.badc{color:var(--bad)}.warnc{color:var(--warn)}
 .op{display:block;width:100%;text-align:left;margin:6px 0}
 .osel{border-color:var(--acc)!important}.ook{border-color:var(--ok)!important;color:var(--ok)}.ono{border-color:var(--bad)!important;color:var(--bad)}
 .lesson{padding:16px 22px;font-size:15px;line-height:1.7}
+.lesson p,.lesson ul{max-width:80ch}
+.g>.g2{flex:1}
 .lesson h3{font-size:15px;margin:16px 0 4px}
 table{border-collapse:collapse;font-size:12px}td{border:1px solid var(--bd);padding:4px 10px;text-align:center}
 .chip{font-size:12px;padding:4px 10px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);cursor:pointer}
